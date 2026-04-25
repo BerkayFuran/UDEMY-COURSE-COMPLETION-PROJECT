@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stelvio Galery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="main">
+    <h1>
+
+        <a href="HomePage.html">
+  <img src="./images/Logo-Alfa-144x120.png" alt="Alfa Romeo Logo"> </a>
+  </h1>
+
+
+<body class="Tonale-Galery">
+<section class="tonaletitle"> 
+<h2>Tonale: Colors and visuals</h2>
+</section>
+   <nav class="TonaleH">
+    <a href="#RedTonale">Red Tonale</a>
+    <a href="#GreenTonale">Green Tonale</a>
+    <a href="#SilverTonale">White Tonale</a>
+    <a href="#BlackTonale">Grey Tonale</a>
+    <a href="#BlueTonale">Blue Tonale</a>
+ </nav>
+<section id="RedTonale">
+<h2>Rosso Tonale</h2>
+<div class="red-galery">
+<img src="./images/BigRedTonale.jpg" class="big">
+<img src="./images/Redtonale1.jpg">
+<img src="./images/Redtonale2.jpg">
+<img src="./images/Redtonale3.jpg">
+
+</section>
+<section id="GreenTonale">
+<h2>Green Tonale</h2>
+<div class="Green-gallery">
+<img src="./images/Greentonalebig.jpg" class="big">
+<img src="./images/Greentonale1.jpg">
+<img src="./images/Greentonale2.jpg">
+<img src="./images/Greentonale3.jpg">
+<img src="./images/Greentonale4.jpg">
+</div>
+<section id="SilverTonale">
+<h2>Grey Tonale</h2>
+<div class="Silver-Gallery">
+<img src="./images/Greytonalebig.jpg" class="big">
+<img src="./images/Greytonale1.jpg">  
+<img src="./images/Greytonale2.jpg">  
+<img src="./images/Greytonale3.jpg">  
+<img src="./images/Greytonale4.jpg">  
+</div>
+<section id="BlackTonale">
+<h2>White Tonale</h2>
+<div class="Black-Gallery">
+<img src="./images/whitetonalebig.png" class="big">
+<img src="./images/Whitetonale1.jpg">
+<img src="./images/Whitetonale2.jpg">
+<img src="./images/Whitetonale3.jpg">
+<img src="./images/Whitetonale4.jpg">
+</div>
+<section id="BlueTonale">
+<h2>Blue Tonale</h2>
+<div class="Blue-Gallery">
+<img src="./images/Bluetonalebig.jpg" class="big">
+<img src="./images/bluetonale1.jpg">
+<img src="./images/bluetonale2.jpg">
+<img src="./images/bluetonale3.jpg">
+<img src="./images/bluetonale4.jpg">
+</div>
+</section>
+</body>
+</html>
+<style>.Tonale-Galery{
+  background-color: white;
+}
+
+.tonaletitle h2{
+ text-align: center;
+ margin-top: 100px;
+ font-size: 70px;
+ background-color: rgb(238, 238, 238);
+font-family: 'Cinzel', serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+ }                
+              
+   .TonaleH {
+ display: flex;
+ justify-content: center;
+ gap: 40px ;
+   }                  
+.TonaleH a {
+  font-size: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+#RedTonale{
+  max-width: 900px;
+  margin: auto;
+}
+#RedTonale h2{
+ font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-top: 100px;
+  margin-bottom: -70px;
+
+}
+#RedTonale img {
+  width: 100%;
+  margin-top: 80px;
+  border-radius: 8px;
+}
+.red-galery {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+.red-galery img {
+    width: 100%;
+    height: 280px;
+  border-radius: 8px;
+  transition: 0.3s;
+  object-fit: cover;
+}
+.red-galery .big {
+  grid-column: 1 / 3;
+  height: 400px;
+}
+#GreenTonale{
+  max-width: 900px;
+  margin: auto;
+}
+#GreenTonale img {
+  width: 100%;
+  margin-top: 80px;
+  border-radius: 8px;
+ 
+}
+.Green-gallery img{
+     width: 100%;
+    height: 280px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.Green-gallery {
+ display: grid;
+grid-template-columns: 1fr 1fr ;
+gap: 20px;
+}
+.Green-gallery .big {
+  grid-column: 1 / 3;
+  height: 400px;
+}
+#GreenTonale h2{
+ font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-top: 100px;
+  margin-bottom: -70px;
+}
+
+#SilverTonale img{
+max-width: 900px;
+margin: auto;
+width: 100%;
+margin-top: 80px;
+border-radius: 8px;
+}
+.Silver-Gallery img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.Silver-Gallery{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 20px;
+}
+.Silver-Gallery .big{
+  grid-column: 1 / 3;
+  height: 480px;
+}
+.Black-Gallery  {
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+   display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 20px;
+  
+}
+.Black-Gallery img{
+   width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.Black-Gallery .big {
+   grid-column: 1 / 3;
+  height: 480px;
+}
+.Blue-Gallery {
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.Blue-Gallery img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.Blue-Gallery .big {
+  grid-column: 1 / 3;
+  height: 480px;
+}
+</style>

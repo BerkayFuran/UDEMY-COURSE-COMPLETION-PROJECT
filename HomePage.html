@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Romeo Home Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+    <h1>
+    <a href="HomePage.html">
+    <img src="./images/Logo-Alfa-144x120.png" alt="Alfa Romeo Logo"> </a>
+   </h1>
+    <div class="menu-icon">
+</div>
+<div class="menu-btn" onclick="toggleMenu()">
+  ☰
+</div>
+
+<div class="sidebar" id="sidebar">
+<a href="HomePage.html"><p>HomePage</p></a>
+<a href="Giulia.html"><p>Giulia</p></a>
+<a href="junior.html"><p>Junior</p></a>
+<a href="Stelvio.html"><p>Stelvio</p></a>
+<a href="Tonale.html"><p>Tonale</p></a>
+</div> 
+
+<div class="Homephoto"><img src="./images/HOME PAGE.png" alt="alfa romeo">
+   </div>
+    <div class="homefont">
+    <h3>Drive the Legend </h3><br>
+   <p>
+     Pure Italian Performance and Driving Passion <br>
+        <br>
+        
+       Experience Alfa Romeo  <br>
+        <br>   
+        Feel the Power <br>
+        <br> 
+       Born from Racing
+   </p>
+    </div>
+   
+    <div class="cars">
+    
+    <div class="car">
+    <a href="Stelvio.html">
+     <img src="./images/StelvioMode.png">
+     </a>
+    <img src="./images/stelvio-sprint-210-cv-diesel-dettaglio-ruota.jpg" id="stelvio-back">
+    <h3 class="car-titlestel">Stelvio</h3>
+    </div>
+
+    <div class="car">
+    <a href="Tonale.html"> 
+    <img src="./images/TonaleModel.png">
+    </a>
+   
+    <img src="./images/Tonale light.jpg" id="tonale-light">
+    <h3 class="car-titleton">Tonale</h3>
+    </div>
+    
+    <div class="car">
+   <a href="Junior.html">
+    <img src="./images/junior model.png">
+   </a>
+    <img src="./images/back_ibrida.jpg" id="junior-back">
+    <h3 class="car-titlejun">Junior</h3>
+</div>
+    
+    <div class="car">
+    <a href="Giulia.html">
+    <img src="./images/giumodel.png">
+    </a>
+    <img src="./images/AR-Giulia-MCA-Sprint-Model-Page-Trim.jpg" id="giu-back">
+      <h3 class="car-titlegiu">Giulia</h3>
+    </div>    
+    </div>
+ 
+    </div>
+    <section class="contact">
+          <div class="contact-container">
+          <div class="contact-box">
+    <img src="./images/string wheel.png">
+    <h4 class="testdrive">Test Drive</h4>
+    <p>Schedule a test drive for a unique Alfa Romeo driving experience, or contact our helpline.
+    </p>
+    <a href="call-you" class="contact-btn">Let us call you</a>
+    </div>
+    <div class="contact-box">
+    <img src="./images/phone.png">
+    <h4 class="phone">Let us call you</h4>
+    <p>To receive information about Alfa Romeo models, fill out the form and we will contact you as soon as possible.</p>
+    <a href="call-you" class="contact-btn">Let us call you</a>
+    </div>
+
+    </section>
+    <footer>
+        <div class="footer-box">
+        <h3>You can reach me here.</h3>
+        
+        <a href="https://www.linkedin.com/in/berkay-furan-8b1076390/?locale=tr" target="_blank"><img src="./images/Linkedin-png-linkedin-icon-1600.png"></a>
+        <a href="https://github.com/BerkayFuran" target="_blank"><img src="./images/GitHub.webp"></a>
+        <a href="mailto:berkayfuran@hotmail.com" target="_blank"><img src="./images/mail.webp"></a>
+      
+        </div>
+       
+    </footer>  
+     <p id="footerp">© 2026 Computer Engineering Student Berkay Furan</p>
+     <script>
+
+function toggleMenu() {
+  const menu = document.getElementById("sidebar");
+
+  if (menu.style.left === "0px") {
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+
+
+document.addEventListener("click", function(e) {
+  const menu = document.getElementById("sidebar");
+  const btn = document.querySelector(".menu-btn");
+
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.style.left = "-260px";
+  }
+});
+
+
+const links = document.querySelectorAll(".sidebar a");
+
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.querySelector("p").classList.add("active");
+  }
+});
+
+</script>
+</body>
+</html>

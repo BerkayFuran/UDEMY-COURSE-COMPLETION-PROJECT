@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Romeo Giulia Page</title>
+    <link rel="stylesheet" href="./style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<body> 
+   
+     <div class="main">
+    <h1>
+    <a href="HomePage.html">
+    <img src="./images/Logo-Alfa-144x120.png" alt="Alfa Romeo Logo"> </a>
+   </h1>
+    <div class="menu-icon">
+</div>
+<div class="menu-btn" onclick="toggleMenu()">
+  ☰
+</div>
+
+<div class="sidebar" id="sidebar">
+<a href="Giulia.html"><p>Giulia</p></a>
+<a href="Junior.html"><p>Junior</p></a>
+<a href="Stelvio.html"><p>Stelvio</p></a>
+<a href="Tonale.html"><p>Tonale</p></a>
+</div> 
+
+
+    <div class="photo"><img src="./images/onden.jpg" alt="alfa romeo">
+    </div>
+    <div class="text">
+    <h3>Become a Giulia owner</h3>
+    <h4>Get the Giulia you want with 5 color options.
+        <br> <br> 
+        <span class="small-gulia">
+        You can view the pictures of the cars by clicking on them.
+    </span>
+    </h4> 
+    <a href="Giulia-Pictures.html" class="giulia-button">
+    Or you can access the entire page from here.
+</a>
+    </div>
+   <div class="giuliamodel">
+   <div class="giuliamodels">
+    <a href="Giulia-Pictures.html#BlueGiulia">
+   <img src="./images/giulia_misano_blue.png">
+</a>
+   <a href="Giulia-Pictures.html#SilverGiulia">
+   <img src="./images/giulia_trofeo_white.png">
+</a>
+   <a href="Giulia-Pictures.html#GreenGiulia">
+   <img src="./images/giulia_verde_montreal.png">
+   </a>
+   <a href="Giulia-Pictures.html#BlackGiulia">
+   <img src="./images/giulia_vulcano_black.png">
+  </a>
+   <a href="Giulia-Pictures.html#RedGiulia">
+   <img src="./images/giumodel.png">
+  </a>
+
+   </div>
+
+   </div>
+   
+
+</div>
+    <script>
+
+function toggleMenu() {
+  const menu = document.getElementById("sidebar");
+
+  if (menu.style.left === "0px") {
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+
+
+document.addEventListener("click", function(e) {
+  const menu = document.getElementById("sidebar");
+  const btn = document.querySelector(".menu-btn");
+
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.style.left = "-260px";
+  }
+});
+
+
+const links = document.querySelectorAll(".sidebar a");
+
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.querySelector("p").classList.add("active");
+  }
+});
+
+</script>
+</body>
+</html>

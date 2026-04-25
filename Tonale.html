@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Romeo Tonale Page</title>
+    <link rel="stylesheet" href="./style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<body> 
+   
+      <div class="main">
+    <h1>
+    <a href="HomePage.html">
+    <img src="./images/Logo-Alfa-144x120.png" alt="Alfa Romeo Logo"> </a>
+   </h1>
+    <div class="menu-icon">
+</div>
+<div class="menu-btn" onclick="toggleMenu()">
+  ☰
+</div>
+
+<div class="sidebar" id="sidebar">
+<a href="Giulia.html"><p>Giulia</p></a>
+<a href="Junior.html"><p>Junior</p></a>
+<a href="Stelvio.html"><p>Stelvio</p></a>
+<a href="Tonale.html"><p>Tonale</p></a>
+</div> 
+
+
+     
+    <div class="photo"><img src="./images/tonale page1.jpg" alt="alfa romeo">
+    </div>
+    <div class="text">
+    <h3>Become a Tonale owner</h3>
+    <h4>Get the Tonale you want with 5 color options.
+        <br> <br> 
+        <span class="small-tonale">
+        You can view the pictures of the cars by clicking on them.
+    </span>
+    </h4> 
+    <a href="Tonale-Pictures.html" class="tonale-button">
+    Or you can access the entire page from here.
+</a>
+    </div>
+   <div class="tonalemodel">
+   <div class="tonalemodels">
+    <a href="Tonale-Pictures.html#BlueTonale">
+   <img src="./images/bluetonale.png">
+</a>
+   <a href="Tonale-Pictures.html#BlackTonale">
+   <img src="./images/whitetonale.png">
+</a>
+   <a href="Tonale-Pictures.html#GreenTonale">
+   <img src="./images/yesiltonale.png">
+   </a>
+   <a href="Tonale-Pictures.html#SilverTonale">
+   <img src="./images/greytonale.png">
+  </a>
+   <a href="Tonale-Pictures.html#RedTonale">
+   <img src="./images/TonaleModel.png">
+  </a>
+
+   </div>
+
+   </div>
+   
+
+</div>
+     <script>
+
+function toggleMenu() {
+  const menu = document.getElementById("sidebar");
+
+  if (menu.style.left === "0px") {
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+
+
+document.addEventListener("click", function(e) {
+  const menu = document.getElementById("sidebar");
+  const btn = document.querySelector(".menu-btn");
+
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.style.left = "-260px";
+  }
+});
+
+
+const links = document.querySelectorAll(".sidebar a");
+
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.querySelector("p").classList.add("active");
+  }
+});
+
+</script>
+</body>
+</html>
+<style>
+body{
+    background-color: rgb(121, 121, 121);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main h1{
+    text-align: center;
+    color: grey;
+    background-color:#3b2626;
+    padding-top: 10px;
+   
+}
+.main h1 img{
+width: 80px;
+height: auto;
+
+}
+
+.photo {
+  position: relative;
+  height: 100vh;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+.photo:hover img {
+  transform: scale(1.02) translateY(-1px);
+}
+.text h3 {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(190, 188, 188);
+  font-size: 42px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Cinzel', serif;
+
+}
+.text h4 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+color: rgb(190, 188, 188);
+margin-top: 100px;
+font-size: 30px;
+letter-spacing: 1px;
+font-family: 'Cinzel', serif;
+}
+.small-stelvio{
+display: block;
+font-size: 18px;
+opacity: 0.8;
+}
+
+.text{
+  text-align: center;
+}
+.tonale-button  {
+   display: inline-block;
+  margin-top: 300px;
+  margin-bottom: 50px;
+  padding: 10px 25px;
+
+  border: 1px solid grey;
+  color: white;
+
+ text-decoration: none;
+ font-size: 20px;
+ letter-spacing: 1px;
+ transition: 0.3s;
+font-family: 'Cinzel', serif;
+}
+ 
+
+ 
+
+.tonale-button:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+body{
+  background-color: #1f347c;
+}
+
+.tonalemodel {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  background-color:#1f347c;
+  margin-top: -300px;
+ 
+}
+.tonalemodels {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* 🔥 KRİTİK */
+  gap: 0px;
+}
+
+.tonalemodels img{
+height: 230px;
+  object-fit:contain;
+ transition: transform 0.3s ease, opacity 0.3s ease;
+ position: relative; 
+
+   display: block;
+
+}
+
+.tonalemodels:hover img{
+  opacity: 0.4;
+  
+}
+.tonalemodels img:hover {
+  opacity: 1;
+  transform:scale(1.2);
+  z-index: 2;
+  }
+
+
+                          /*Tonale Gallery*/   
+.Tonale-Galery{
+  background-color: white;
+}
+
+.tonaletitle h2{
+ text-align: center;
+ margin-top: 100px;
+ font-size: 70px;
+ background-color: rgb(238, 238, 238);
+font-family: 'Cinzel', serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+ }                
+              
+   .TonaleH {
+ display: flex;
+ justify-content: center;
+ gap: 40px ;
+   }                  
+.TonaleH a {
+  font-size: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+#RedTonale{
+  max-width: 900px;
+  margin: auto;
+}
+#RedTonale h2{
+ font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-top: 100px;
+  margin-bottom: -70px;
+
+}
+#RedTonale img {
+  width: 100%;
+  margin-top: 80px;
+  border-radius: 8px;
+}
+.red-galery {
+display: grid;
+grid-template-columns: 1fr 1fr ;
+gap: 20px;
+}
+.red-galery img {
+    width: 100%;
+    height: 280px;
+  border-radius: 8px;
+  transition: 0.3s;
+  object-fit: cover;
+}
+.red-galery .big {
+  grid-column: 1 / 3;
+  height: 400px;
+}
+#GreenStelvio{
+  max-width: 900px;
+  margin: auto;
+}
+#GreenStelvio img {
+  width: 100%;
+  margin-top: 80px;
+  border-radius: 8px;
+ 
+}
+.Green-gallery img{
+     width: 100%;
+    height: 280px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.Green-gallery {
+ display: grid;
+grid-template-columns: 1fr 1fr ;
+gap: 20px;
+}
+.Green-gallery .big {
+  grid-column: 1 / 3;
+  height: 400px;
+}
+#GreenGiulia h2{
+ font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-top: 100px;
+  margin-bottom: -70px;
+}
+
+#SilverGiulia img{
+max-width: 900px;
+margin: auto;
+width: 100%;
+margin-top: 80px;
+border-radius: 8px;
+}
+.Silver-Gallery img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.Silver-Gallery{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 20px;
+}
+.Silver-Gallery .big{
+  grid-column: 1 / 3;
+  height: 480px;
+}
+.Black-Gallery  {
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+   display: grid;
+  grid-template-columns:  1fr 1fr;
+  gap: 20px;
+  
+}
+.Black-Gallery img{
+   width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.Black-Gallery .big {
+   grid-column: 1 / 3;
+  height: 480px;
+}
+.Blue-Gallery {
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.Blue-Gallery img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.Blue-Gallery .big {
+  grid-column: 1 / 3;
+  height: 480px;
+}
+</style>
